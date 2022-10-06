@@ -1,8 +1,10 @@
 {
-  "name": "app",
+  "name": "@remotenv/app",
   "type": "module",
   "version": "1.0.0",
   "license": "MIT",
+  "main": "export/index.cjs",
+  "types": "export/index.d.ts",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -10,6 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/node": "^1.1.0",
     "@astrojs/preact": "^1.1.1",
     "astro": "^1.4.4",
     "preact": "^10.11.1"
@@ -27,6 +30,6 @@
     "extends": [
       "@remotenv/eslint-config"
     ],
-    "ignorePatterns": "*.mjs"
+    "ignorePatterns": "*.[m|c]js"
   }
 }

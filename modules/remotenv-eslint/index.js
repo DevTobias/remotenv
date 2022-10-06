@@ -73,6 +73,11 @@ module.exports = {
 				sourceType: "module",
 				project: "./tsconfig.json",
 			},
+			rules: {
+				"import/prefer-default-export": "off",
+				"no-console": "off",
+				"class-methods-use-this": "off",
+			},
 		},
 	],
 };
