@@ -1,0 +1,12 @@
+{
+	"name": "@remotenv/prettier-config",
+	"version": "1.0.0",
+	"main": "index.js",
+	"files": [
+		"./index.js"
+	],
+	"dependencies": {
+		"prettier": "^2.7.1",
+		"prettier-plugin-astro": "^0.5.5"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"name": "remotenv",
+	"private": true,
+	"license": "MIT",
+	"workspaces": [
+		"modules/*",
+		"app",
+		"backend"
+	]
+}
