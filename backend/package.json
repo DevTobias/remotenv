@@ -16,6 +16,7 @@
     "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.1.4",
     "@nestjs/platform-fastify": "^9.1.4",
+    "@nestjs/terminus": "^9.1.2",
     "@nestjs/throttler": "^3.0.0",
     "@prisma/client": "^4.4.0",
     "nestjs-pino": "^3.1.1",
