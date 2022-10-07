@@ -7,12 +7,22 @@ datasource db {
   url      = env("DATABASE_FILE")
 }
 
+model Environment {
+  name      String                @unique
+  variables EnvironmentVariable[]
+
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+}
+
 model EnvironmentVariable {
-  //? Attributes
   name  String @unique
   value String
 
-  //? Metadata
+  environment   Environment? @relation(fields: [environmentId], references: [id])
+  environmentId String?
+
   id        String   @id @default(uuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())

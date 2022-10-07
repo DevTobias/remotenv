@@ -10,6 +10,11 @@
 	"workbench.startupEditor": "none",
 	"explorer.compactFolders": false,
 
+	// prisma configuration
+	"[prisma]": {
+		"editor.defaultFormatter": "Prisma.prisma"
+	},
+
 	// astro configuration
 	"prettier.documentSelectors": ["**/*.astro"],
 	"[astro]": {
