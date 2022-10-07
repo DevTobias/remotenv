@@ -1,7 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { FastifyAdapter, NestFastifyApplication as App } from '@nestjs/platform-fastify';
 import { fastifyStatic } from '@fastify/static';
-import astro from '@remotenv/app';
 import { join } from 'path';
 
 import { AppModule } from 'src/app.module';
@@ -10,10 +9,8 @@ const initializeApp = async (app: App) => {
 	app.setGlobalPrefix('api/v1');
 
 	app.register(fastifyStatic, {
-		root: join(__dirname, '..', '..', 'app', 'dist', 'client'),
+		root: join(__dirname, '..', '..', 'app', 'dist'),
 	});
-
-	app.use((await astro()).handler);
 };
 
 const bootstrap = async () => {
