@@ -4,14 +4,6 @@ module.exports = {
 	singleQuote: true,
 	tabWidth: 2,
 	trailingComma: "es5",
-	useTabs: true,
-	overrides: [
-		{
-			files: [".*", "*.json", "*.md", "*.toml", "*.yml"],
-			options: {
-				useTabs: false,
-			},
-		},
-	],
+	useTabs: false,
 	plugins: [require.resolve("prettier-plugin-astro")],
 };
