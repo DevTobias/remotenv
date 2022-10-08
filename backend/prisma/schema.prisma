@@ -14,10 +14,11 @@ model Environment {
 }
 
 model EnvironmentVariable {
-  id    String @id @default(uuid())
-  name  String @unique
+  name  String
   value String
 
-  environment   Environment? @relation(fields: [environmentId], references: [id])
-  environmentId String?
+  environment   Environment @relation(fields: [environmentId], references: [id])
+  environmentId String
+
+  @@id([name, environmentId])
 }

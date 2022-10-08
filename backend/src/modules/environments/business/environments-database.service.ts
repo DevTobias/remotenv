@@ -9,7 +9,7 @@ import { PrismaService } from 'src/modules/_setup/prisma/prisma.service';
 export class EnvironmentsDatabaseService implements EnvironmentsService {
   constructor(private readonly db: PrismaService) {}
 
-  private variableSelect = { select: { name: true, value: true, id: true } };
+  private variableSelect = { select: { name: true, value: true } };
 
   async getAll(): Promise<Environment[]> {
     return this.db.environment.findMany({ include: { variables: this.variableSelect } });
@@ -35,16 +35,19 @@ export class EnvironmentsDatabaseService implements EnvironmentsService {
   }
 
   async updateEnvironment(id: string, { variables }: UpdateEnvironmentDto): Promise<Environment> {
-    const upsertManyVariables = variables.map((env) =>
-      this.db.environmentVariable.upsert({
-        where: { name: env.name },
-        create: { name: env.name, value: env.value, environmentId: id },
-        update: { value: env.value },
-      })
-    );
-
     const results = await this.db.$transaction([
-      ...upsertManyVariables,
+      ...variables.map((env) =>
+        this.db.environmentVariable.upsert({
+          where: {
+            name_environmentId: {
+              environmentId: id,
+              name: env.name,
+            },
+          },
+          create: { name: env.name, value: env.value, environmentId: id },
+          update: { value: env.value },
+        })
+      ),
       this.db.environment.findUnique({
         where: { id },
         include: { variables: this.variableSelect },
