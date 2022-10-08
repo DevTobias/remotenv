@@ -9,6 +9,8 @@
 	],
 	"scripts": {
 		"backend": "yarn workspace @remotenv/backend",
-		"app": "yarn workspace @remotenv/app"
+		"app": "yarn workspace @remotenv/app",
+		"docker:build": "docker build -f deploy/Dockerfile -t remotenv/application .",
+		"docker:start": "docker compose -f deploy/docker-compose.yml -p remotenv up"
 	}
 }
