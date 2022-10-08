@@ -1,24 +1,13 @@
 ---
 import Counter from '~/components/Counter';
+import Layout from '~/layouts/PageLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<style>
-			body {
-				background: radial-gradient(123.22% 129.67% at 100.89% -5.6%, #201d47 0%, #17153a 100%), #ffffff;
-			}
-		</style>
-	</head>
-
-	<body>
-		<main class="flex justify-center items-center h-screen w-full">
-			<h1 class="text-5xl text-white">Hello, Solid!</h1>
-			<Counter client:idle />
-		</main>
-	</body>
-</html>
+<Layout>
+  <div class="flex justify-center items-center h-full w-full">
+    <div>
+      <h1 class="text-5xl">Hello, Solid!</h1>
+      <Counter client:idle />
+    </div>
+  </div>
+</Layout>

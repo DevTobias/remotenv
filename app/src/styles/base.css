@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.bg-page {
+		background: radial-gradient(123.22% 129.67% at 100.89% -5.6%, #201D47 0%, #17153A 100%), #FFFFFF;
+	}
+
+	.ring-focus {
+		@apply focus:outline-none focus:ring-2 focus:ring-primary-500;
+	}
+
+	.btn {
+		@apply inline-flex items-center justify-center rounded border border-transparent font-medium text-center text-base leading-snug transition py-3 px-6 shadow-lg ease-in duration-200 focus:ring-primary-500 focus:ring-offset-primary-200 focus:ring-2 focus:ring-offset-2;
+	}
+
+	.icon-btn {
+		@apply ring-focus dark:text-gray-400 dark:bg-yankees-600 dark:hover:bg-yankees-700 rounded-lg text-sm p-2.5 inline-flex items-center;
+	}
+}

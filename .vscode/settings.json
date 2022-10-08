@@ -15,6 +15,9 @@
 		"editor.defaultFormatter": "Prisma.prisma"
 	},
 
+	// css configuration
+	"css.lint.unknownAtRules": "ignore",
+
 	// astro configuration
 	"prettier.documentSelectors": ["**/*.astro"],
 	"[astro]": {
@@ -25,7 +28,7 @@
 	"eslint.workingDirectories": ["./app", "./backend"],
 
 	// inline fold & tailwind intellisense support
-	"inlineFold.supportedLanguages": ["astro"],
+	//"inlineFold.supportedLanguages": ["astro"],
 	"editor.quickSuggestions": {
 		"strings": true
 	},

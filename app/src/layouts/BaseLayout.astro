@@ -1,0 +1,21 @@
+---
+import '~/styles/base.css';
+import { SITE } from '~/config';
+---
+
+<!DOCTYPE html>
+<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px] dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{SITE.title}</title>
+    <meta name="description" content={SITE.description} />
+  </head>
+
+  <body
+    class="antialiased dark:text-slate-100 dark:bg-slate-900 tracking-tight min-h-screen h-screen"
+  >
+    <slot />
+  </body>
+</html>
