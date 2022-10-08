@@ -6,5 +6,9 @@
 		"modules/*",
 		"app",
 		"backend"
-	]
+	],
+	"scripts": {
+		"backend": "yarn workspace @remotenv/backend",
+		"app": "yarn workspace @remotenv/app"
+	}
 }
