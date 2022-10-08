@@ -4,12 +4,15 @@ import { fastifyStatic } from '@fastify/static';
 import { join } from 'path';
 import { Logger } from 'nestjs-pino';
 import { fastifyHelmet } from '@fastify/helmet';
+import { ValidationPipe } from '@nestjs/common';
 
 import { AppModule } from 'src/app.module';
 import { ApiConfigService } from 'src/modules/_setup/config/api-config.service';
 
 const initializeApp = async (app: App, config: ApiConfigService) => {
   app.useLogger(app.get(Logger));
+  app.useGlobalPipes(new ValidationPipe());
+
   await app.register(fastifyHelmet);
 
   app.setGlobalPrefix(config.get('API_PREFIX'));

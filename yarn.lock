@@ -1793,6 +1793,19 @@ ci-info@^3.3.1:
   resolved "https://registry.npmjs.org/ci-info/-/ci-info-3.4.0.tgz"
   integrity sha512-t5QdPT5jq3o262DOQ8zA6E1tlH2upmUc4Hlvrbx1pGYJuiiHl7O7rvVNI+l8HTVhd/q3Qc9vqimkNk5yiXsAug==
 
+class-transformer@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/class-transformer/-/class-transformer-0.5.1.tgz#24147d5dffd2a6cea930a3250a677addf96ab336"
+  integrity sha512-SQa1Ws6hUbfC98vKGxZH3KFY0Y1lm5Zm0SY8XX9zbK7FJCyVEac3ATW0RIpwzW+oOfmHE5PMPufDG9hCfoEOMw==
+
+class-validator@^0.13.2:
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/class-validator/-/class-validator-0.13.2.tgz#64b031e9f3f81a1e1dcd04a5d604734608b24143"
+  integrity sha512-yBUcQy07FPlGzUjoLuUfIOXzgynnQPPruyK1Ge2B74k9ROwnle1E+NxLWnUv5OLU8hA/qL5leAE9XnXq3byaBw==
+  dependencies:
+    libphonenumber-js "^1.9.43"
+    validator "^13.7.0"
+
 cli-boxes@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-2.2.1.tgz#ddd5035d25094fce220e9cab40a45840a440318f"
@@ -2956,9 +2969,9 @@ fastify-plugin@^4.0.0, fastify-plugin@^4.2.1:
   resolved "https://registry.npmjs.org/fastify-plugin/-/fastify-plugin-4.2.1.tgz"
   integrity sha512-dlGKiwLzRBKkEf5J5ho0uAD/Jdv8GQVUbriB3tAX3ehRUXE4gTV3lRd5inEg9li1aLzb0EGj8y2K4/8g1TN06g==
 
-fastify@4.7.0:
+fastify@4.7.0, fastify@^4.7.0:
   version "4.7.0"
-  resolved "https://registry.npmjs.org/fastify/-/fastify-4.7.0.tgz"
+  resolved "https://registry.yarnpkg.com/fastify/-/fastify-4.7.0.tgz#53c0cc16c3850580d22d0bb8e966b263e5c0fcd1"
   integrity sha512-FK3WT6arZOd2Fm696vIn90DOFr1f8QZbFcvUzYRPJTBV0pzm1xN8Y3n9yegtv1ajAxpdTwuLhB10Wwb/ptMRqQ==
   dependencies:
     "@fastify/ajv-compiler" "^3.3.1"
@@ -4012,6 +4025,11 @@ levn@^0.4.1:
   dependencies:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
+
+libphonenumber-js@^1.9.43:
+  version "1.10.13"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.10.13.tgz#0b5833c7fdbf671140530d83531c6753f7e0ea3c"
+  integrity sha512-b74iyWmwb4GprAUPjPkJ11GTC7KX4Pd3onpJfKxYyY8y9Rbb4ERY47LvCMEDM09WD3thiLDMXtkfDK/AX+zT7Q==
 
 light-my-request@5.6.1, light-my-request@^5.6.1:
   version "5.6.1"
@@ -6596,6 +6614,11 @@ uvu@^0.5.0:
     diff "^5.0.0"
     kleur "^4.0.3"
     sade "^1.7.3"
+
+validator@^13.7.0:
+  version "13.7.0"
+  resolved "https://registry.yarnpkg.com/validator/-/validator-13.7.0.tgz#4f9658ba13ba8f3d82ee881d3516489ea85c0857"
+  integrity sha512-nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw==
 
 vfile-location@^4.0.0:
   version "4.0.1"

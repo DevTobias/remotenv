@@ -40,6 +40,7 @@
 	"emmet.includeLanguages": {
 		"typescript": "typescriptreact"
 	},
+	"auto-close-tag.disableOnLanguage": ["javascript", "typescript"],
 
 	// vscode explorer file nesting
 	"explorer.fileNesting.enabled": true,
