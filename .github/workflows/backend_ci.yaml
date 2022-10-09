@@ -34,7 +34,7 @@ jobs:
         run: yarn install
 
       - name: Generate prisma graphql types
-        run: yarn prisma:generate
+        run: yarn prisma generate
 
       - name: Lint the repository
         run: yarn lint
