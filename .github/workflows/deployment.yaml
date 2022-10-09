@@ -6,13 +6,13 @@ on:
       - '*'
     paths:
       - "backend/**"
-			- "app/**"
+      - "app/**"
 
   workflow_dispatch:
 
 jobs:
   test-app:
-		name: build and test app
+    name: build and test app
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: 16
           cache: 'yarn'
-          cache-dependency-path: app/yarn.lock
+          cache-dependency-path: yarn.lock
 
       - name: Install dependencies
         run: yarn install
