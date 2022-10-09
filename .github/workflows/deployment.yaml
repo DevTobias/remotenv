@@ -37,8 +37,8 @@ jobs:
       - name: Build the backend
         run: yarn build
 
-	test-backend:
-	 	name: build and test backend
+  test-backend:
+    name: build and test backend
     runs-on: ubuntu-latest
     defaults:
       run:
