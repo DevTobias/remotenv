@@ -1,13 +1,8 @@
 ---
-import Counter from '~/components/Counter';
+import EnvironmentView from '~/features/environments/EnvironmentView.astro';
 import Layout from '~/layouts/PageLayout.astro';
 ---
 
 <Layout>
-  <div class="flex justify-center items-center h-full w-full">
-    <div>
-      <h1 class="text-5xl">Hello, Solid!</h1>
-      <Counter client:idle />
-    </div>
-  </div>
+  <EnvironmentView />
 </Layout>
